@@ -4,40 +4,47 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Weather App</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom CSS -->
     <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
     <script defer src="{{ url_for('static', filename='js/scripts.js') }}"></script>
 </head>
 <body>
-    <!-- Main Title and Description -->
-    <div id="header">
-        <h1>Weather App</h1>
-        <p>Enter the name of a city to get its current weather information.</p>
-    </div>
+    <div class="container">
+        <!-- Main Title and Description -->
+        <div id="header" class="text-center py-4">
+            <h1>Weather App</h1>
+            <p>Enter the name of a city to get its current weather information.</p>
+        </div>
 
-    <!-- Weather Info Display -->
-    <div id="weatherInfo" style="display: none;">
-        <h2>Weather Details</h2>
-        <img id="weatherImage" src="" alt="Weather Image" style="display: block; max-width: 100%; height: auto;">
-        <p id="weatherText"></p>
-    </div>
+        <!-- Search Bar and Button -->
+        <div id="search" class="text-center mb-4">
+            <input type="text" id="location" class="form-control d-inline-block w-auto" placeholder="Enter city">
+            <button id="searchButton" class="btn btn-success ml-2">Get Weather</button>
+        </div>
 
-    <!-- Search Bar and Button -->
-    <div id="search">
-        <input type="text" id="location" placeholder="Enter city">
-        <button id="searchButton">Get Weather</button>
-    </div>
+        <!-- Weather Info Display -->
+        <div id="weatherInfo" class="text-center mb-4" style="display: none;">
+            <img id="weatherImage" src="" alt="Weather Image" class="img-fluid mb-2" style="width: 150px; height: 150px;">
+            <h3 id="weatherText"></h3>
+        </div>
 
-    <div id="aboutMe">
-        <p style="padding-top: 300px;">Developed by <a style="color: black;" href="https://www.linkedin.com/in/samanyu-satheesh/" target="_blank">Samanyu Satheesh</a> for PM Accelerator</p>
-    </div>
+        <div id="aboutMe" class="text-center mb-4">
+            <p>Developed by <a href="https://www.linkedin.com/in/samanyu-satheesh/" target="_blank">Samanyu Satheesh</a> for PM Accelerator</p>
+        </div>
 
-    <!-- Info Button and Info Text -->
-    <div id="info">
-        <button id="infoButton">Info</button>
-        <div id="infoText" style="display: none;">
-            <p>This weather app allows you to search for the current weather in any city. Enter the city name and click "Get Weather" to see the information.</p>
+        <!-- Info Button and Info Text -->
+        <div id="info" class="text-center mb-4">
+            <button id="infoButton" class="btn btn-dark">Info</button>
+            <div id="infoText" class="alert alert-info mt-2" style="display: none;">
+                <p>The Product Manager Accelerator Program is designed to support PM professionals through every stage of their career. From students looking for entry-level jobs to Directors looking to take on a leadership role, our program has helped over hundreds of students fulfill their career aspirations.</p>
+            </div>
         </div>
     </div>
-
+    <!-- Bootstrap JS and dependencies (if needed) -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </body>
 </html>

@@ -1,3 +1,7 @@
+html {
+    overflow-y: scroll; /* scrollbar is always present, this avoids "shift" motion when scrollbar appears/disappears */
+}
+
 body {
     font-family: Arial, sans-serif;
     margin: 0;
@@ -8,7 +12,6 @@ body {
 
 #header {
     padding: 20px;
-    border-bottom: 1px solid #ddd;
 }
 
 #search {
@@ -26,17 +29,50 @@ body {
     cursor: pointer;
 }
 
+#aboutMe {
+    padding-top: 100px;
+}
+
+#aboutMe a {
+    color: black;
+    text-decoration: underline; 
+}
+
 #info {
     margin: 20px;
+    padding-top: 10px;
 }
 
 #infoButton {
-    padding: 10px 20px;
+    padding: 10px 30px;
     font-size: 16px;
     cursor: pointer;
 }
 
 #infoText {
-    margin-top: 10px;
+    display: none;
+    margin: 20px auto;
+    max-width: 600px;
     font-size: 14px;
+    padding: 10px;
+    background-color: #b8defe;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+#weatherInfo {
+    text-align: center;
+    padding: 20px;
+    margin: 20px auto;
+    max-width: 850px;
+    margin-top: 20px;
+    border-radius: 10px;
+    background-color: #b8defe;
+}
+
+#weatherImage {
+    display: block;
+    margin: 0 auto;
+    width: 150px;
+    height: 150px;
+    object-fit: contain;
 }

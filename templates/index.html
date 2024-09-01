@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+    <script defer src="{{ url_for('static', filename='js/scripts.js') }}"></script>
+</head>
+<body>
+    <!-- Main Title and Description -->
+    <div id="header">
+        <h1>Weather App</h1>
+        <p>Enter the name of a city to get its current weather information.</p>
+    </div>
+
+    <!-- Weather Info Display -->
+    <div id="weatherInfo" style="display: none;">
+        <h2>Weather Details</h2>
+        <img id="weatherImage" src="" alt="Weather Image" style="display: block; max-width: 100%; height: auto;">
+        <p id="weatherText"></p>
+    </div>
+
+    <!-- Search Bar and Button -->
+    <div id="search">
+        <input type="text" id="location" placeholder="Enter city">
+        <button id="searchButton">Get Weather</button>
+    </div>
+
+    <div id="aboutMe">
+        <p style="padding-top: 300px;">Developed by <a style="color: black;" href="https://www.linkedin.com/in/samanyu-satheesh/" target="_blank">Samanyu Satheesh</a> for PM Accelerator</p>
+    </div>
+
+    <!-- Info Button and Info Text -->
+    <div id="info">
+        <button id="infoButton">Info</button>
+        <div id="infoText" style="display: none;">
+            <p>This weather app allows you to search for the current weather in any city. Enter the city name and click "Get Weather" to see the information.</p>
+        </div>
+    </div>
+
+</body>
+</html>

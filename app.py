@@ -23,7 +23,7 @@ def weather():
 
     data = response.json()
     
-    # xxtract the data we want from the API response
+    # extract the data we want from the API response
     description = data.get('current', {}).get('condition', {}).get('text', 'No description available')
     image_url = data.get('current', {}).get('condition', {}).get('icon', '')
     temp_fahrenheit = data.get('current', {}).get('temp_f', 'N/A')  # the temperature in Fahrenheit

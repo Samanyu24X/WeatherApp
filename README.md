@@ -1,3 +1,5 @@
+Walkthrough: https://youtu.be/rHlI2iX_tPA?si=aZv3_tuqM_un0WWP
+
 This is my submission for the PM Accelerator Technical Assessment. The web app is written using HTML/CSS/JS with Flask acting as the server-side backend.
 
 To run this code on your local machine, you must do the following:
